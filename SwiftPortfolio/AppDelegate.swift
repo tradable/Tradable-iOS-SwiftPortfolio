@@ -25,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        if let url = launchOptions?[UIApplicationLaunchOptionsURLKey] as? NSURL {
+            //Connected to the Tradable API
+            Tradable.sharedInstance.activateAfterLaunchWithURL(url)
+        }
+        
         // Override point for customization after application launch.
         return true
     }

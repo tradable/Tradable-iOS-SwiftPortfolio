@@ -14,6 +14,7 @@ import TradableAPI
 class ViewController: UIViewController, TradableAPIDelegate {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var activateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,9 @@ class ViewController: UIViewController, TradableAPIDelegate {
 
     //Delegate method callback; TradableAPI is ready to be used
     func tradableReady() {
+        print("Tradable is READY")
+        
+        activateButton.hidden = true
         
         //Gets the current OS user
         Tradable.sharedInstance.getCurrentUser { (user, error) -> Void in
@@ -39,11 +43,9 @@ class ViewController: UIViewController, TradableAPIDelegate {
         }
     }
 
-    @IBAction func activateTradableTouched(sender: UIButton) {
-        sender.hidden = true
-        
-        //Begins authentication flow with clientID 10007 and custom URI
-        Tradable.authenticateWithAppIdAndUri(100007, uri: "com.tradable.example3://oauth2callback")
+    @IBAction func activateTradableTouched(sender: UIButton) {       
+        //Begins authentication flow with clientID 100007 and custom URI in system browser
+        Tradable.authenticateWithAppIdAndUri(100007, uri: "com.tradable.example3://oauth2callback", webView: nil)
     }
     
     override func didReceiveMemoryWarning() {
