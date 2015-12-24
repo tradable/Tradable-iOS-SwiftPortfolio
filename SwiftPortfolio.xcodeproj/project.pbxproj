@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4BDF4FAE1C11A7440082DEBC /* TradableAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BDF4FAD1C11A7440082DEBC /* TradableAPI.framework */; };
-		4BDF4FAF1C11A7440082DEBC /* TradableAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BDF4FAD1C11A7440082DEBC /* TradableAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B7B1F481C2C1D5B00CB64C8 /* TradableAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7B1F471C2C1D5B00CB64C8 /* TradableAPI.framework */; };
+		4B7B1F491C2C1D5B00CB64C8 /* TradableAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7B1F471C2C1D5B00CB64C8 /* TradableAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BDFDE731BFC954B003A82DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDFDE721BFC954B003A82DD /* AppDelegate.swift */; };
 		4BDFDE751BFC954B003A82DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDFDE741BFC954B003A82DD /* ViewController.swift */; };
 		4BDFDE781BFC954B003A82DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDFDE761BFC954B003A82DD /* Main.storyboard */; };
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4BDF4FAF1C11A7440082DEBC /* TradableAPI.framework in Embed Frameworks */,
+				4B7B1F491C2C1D5B00CB64C8 /* TradableAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,7 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4BDF4FAD1C11A7440082DEBC /* TradableAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TradableAPI.framework; path = SwiftPortfolio/TradableAPI.framework; sourceTree = "<group>"; };
+		4B7B1F471C2C1D5B00CB64C8 /* TradableAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TradableAPI.framework; path = Frameworks/TradableAPI.framework; sourceTree = "<group>"; };
 		4BDFDE6F1BFC954B003A82DD /* SwiftPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDFDE721BFC954B003A82DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDFDE741BFC954B003A82DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BDF4FAE1C11A7440082DEBC /* TradableAPI.framework in Frameworks */,
+				4B7B1F481C2C1D5B00CB64C8 /* TradableAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		4BDFDE661BFC954B003A82DD = {
 			isa = PBXGroup;
 			children = (
-				4BDF4FAD1C11A7440082DEBC /* TradableAPI.framework */,
+				4B7B1F471C2C1D5B00CB64C8 /* TradableAPI.framework */,
 				4BDFDE711BFC954B003A82DD /* SwiftPortfolio */,
 				4BDFDE701BFC954B003A82DD /* Products */,
 			);
@@ -273,6 +273,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftPortfolio",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = SwiftPortfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -290,6 +291,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftPortfolio",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = SwiftPortfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
