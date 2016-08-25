@@ -11,41 +11,33 @@ import UIKit
 import TradableAPI
 
 //Conforms to TradableAPIDelegate
-class ViewController: UIViewController, TradableAPIDelegate {
+class ViewController: UIViewController, TradableAuthDelegate {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var accountLabel: UILabel!
     @IBOutlet weak var activateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Assign the Tradable delegate to self
-        Tradable.sharedInstance.delegate = self
+        //Assign the Tradable auth delegate to self
+        Tradable.sharedInstance.authDelegate = self
         
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    //Delegate method callback; TradableAPI is ready to be used
-    func tradableReady() {
-        print("Tradable is READY")
+    //Authentication delegate method callback; TradableAPI is ready to be used for certain account
+    func tradableReady(forAccount: TradableAccount) {
+        print("Tradable is READY for account: \(forAccount)")
         
         activateButton.hidden = true
-        
-        //Gets the current OS user
-        Tradable.sharedInstance.getCurrentUser { (user, error) -> Void in
-            self.nameLabel.hidden = false
-            
-            if let user = user {
-                self.nameLabel.text = "Hi " + user.userName + "!"
-            } else {
-                self.nameLabel.text = error!.errorDescription
-            }
-        }
+
+        accountLabel.text = "You are now using " + forAccount.displayName + "."
+        accountLabel.hidden = false
     }
 
     @IBAction func activateTradableTouched(sender: UIButton) {       
-        //Begins authentication flow with clientID 100007 and custom URI in system browser
-        Tradable.authenticateWithAppIdAndUri(100007, uri: "com.tradable.example3://oauth2callback", webView: nil)
+        //Begins authentication flow with clientID 100007 and custom URI in system browser; will store token in keychain and use it on the next run, if possible.
+        Tradable.sharedInstance.activateOrAuthenticate(100007, uri: "com.tradable.example3://oauth2callback", webView: nil)
     }
     
     override func didReceiveMemoryWarning() {
