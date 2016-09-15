@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		24323A81C97F8711C2D0E3E9 /* Pods_SwiftPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88D7A91B1673512C8720A51 /* Pods_SwiftPortfolio.framework */; };
-		4B7B1F481C2C1D5B00CB64C8 /* TradableAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7B1F471C2C1D5B00CB64C8 /* TradableAPI.framework */; };
-		4B7B1F491C2C1D5B00CB64C8 /* TradableAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7B1F471C2C1D5B00CB64C8 /* TradableAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BDFDE731BFC954B003A82DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDFDE721BFC954B003A82DD /* AppDelegate.swift */; };
 		4BDFDE751BFC954B003A82DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDFDE741BFC954B003A82DD /* ViewController.swift */; };
 		4BDFDE781BFC954B003A82DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDFDE761BFC954B003A82DD /* Main.storyboard */; };
 		4BDFDE7A1BFC954B003A82DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDFDE791BFC954B003A82DD /* Assets.xcassets */; };
 		4BDFDE7D1BFC954B003A82DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDFDE7B1BFC954B003A82DD /* LaunchScreen.storyboard */; };
+		505C2BC21D8AC64F008A5CFA /* TradableAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505C2BC11D8AC64F008A5CFA /* TradableAPI.framework */; };
+		505C2BC31D8AC64F008A5CFA /* TradableAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 505C2BC11D8AC64F008A5CFA /* TradableAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4B7B1F491C2C1D5B00CB64C8 /* TradableAPI.framework in Embed Frameworks */,
+				505C2BC31D8AC64F008A5CFA /* TradableAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +33,6 @@
 
 /* Begin PBXFileReference section */
 		2B34A7E941F1F384D40B8CAB /* Pods-SwiftPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPortfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPortfolio/Pods-SwiftPortfolio.release.xcconfig"; sourceTree = "<group>"; };
-		4B7B1F471C2C1D5B00CB64C8 /* TradableAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TradableAPI.framework; path = Frameworks/TradableAPI.framework; sourceTree = "<group>"; };
 		4BDFDE6F1BFC954B003A82DD /* SwiftPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDFDE721BFC954B003A82DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDFDE741BFC954B003A82DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		4BDFDE791BFC954B003A82DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BDFDE7C1BFC954B003A82DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BDFDE7E1BFC954B003A82DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		505C2BC11D8AC64F008A5CFA /* TradableAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TradableAPI.framework; path = Frameworks/TradableAPI.framework; sourceTree = "<group>"; };
 		A88D7A91B1673512C8720A51 /* Pods_SwiftPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2CBD0C7079E17D76547A5C4 /* Pods-SwiftPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPortfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPortfolio/Pods-SwiftPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B7B1F481C2C1D5B00CB64C8 /* TradableAPI.framework in Frameworks */,
+				505C2BC21D8AC64F008A5CFA /* TradableAPI.framework in Frameworks */,
 				24323A81C97F8711C2D0E3E9 /* Pods_SwiftPortfolio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,7 +92,7 @@
 		6CEAC92444FEC40883F6C85B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B7B1F471C2C1D5B00CB64C8 /* TradableAPI.framework */,
+				505C2BC11D8AC64F008A5CFA /* TradableAPI.framework */,
 				A88D7A91B1673512C8720A51 /* Pods_SwiftPortfolio.framework */,
 			);
 			name = Frameworks;
@@ -137,11 +137,13 @@
 		4BDFDE671BFC954B003A82DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Tradable ApS";
 				TargetAttributes = {
 					4BDFDE6E1BFC954B003A82DD = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -259,6 +261,7 @@
 		4BDFDE7F1BFC954B003A82DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -269,14 +272,15 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -305,6 +309,7 @@
 		4BDFDE801BFC954B003A82DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -315,14 +320,15 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -336,6 +342,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -345,7 +352,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2CBD0C7079E17D76547A5C4 /* Pods-SwiftPortfolio.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftPortfolio",
@@ -356,6 +366,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tradable.swifttest.SwiftPortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -364,7 +375,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B34A7E941F1F384D40B8CAB /* Pods-SwiftPortfolio.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftPortfolio",
@@ -375,6 +389,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tradable.swifttest.SwiftPortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
