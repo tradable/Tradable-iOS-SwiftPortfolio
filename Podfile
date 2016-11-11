@@ -6,8 +6,8 @@ target 'SwiftPortfolio' do
   use_frameworks!
 
   # Pods for SwiftPortfolio
-    pod 'Alamofire', '~> 3.5'
-    pod 'SwiftyJSON', '~> 2.3'
-    pod 'SwiftKeychainWrapper', '~> 2.0'
+    pod 'Alamofire', '~> 4.0'
+    pod 'SwiftyJSON', '~> 3.1'
+    pod 'SwiftKeychainWrapper', '~> 3.0'
 
 end

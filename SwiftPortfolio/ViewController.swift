@@ -10,8 +10,8 @@ import UIKit
 
 import TradableAPI
 
-//Conforms to TradableAPIDelegate
-class ViewController: UIViewController, TradableAuthDelegate {
+// Conforms to TradableAuthDelegate and TradableEventsDelegate
+class ViewController: UIViewController, TradableAuthDelegate, TradableEventsDelegate {
 
     @IBOutlet weak var accountLabel: UILabel!
     @IBOutlet weak var activateButton: UIButton!
@@ -19,25 +19,44 @@ class ViewController: UIViewController, TradableAuthDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Assign the Tradable auth delegate to self
+        // Assign the Tradable auth delegate to self
         Tradable.sharedInstance.authDelegate = self
+
+        // Assign the TradableEventsDelegate to self
+        Tradable.sharedInstance.eventsDelegate = self
         
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    //Authentication delegate method callback; TradableAPI is ready to be used for certain account
-    func tradableReady(forAccount: TradableAccount) {
-        print("Tradable is READY for account: \(forAccount)")
+    // Authentication delegate method callback; TradableAPI is ready to be used for certain account
+    func tradableReady(for account: TradableAccount) {
+        print("Tradable is READY for account: \(account)")
         
-        activateButton.hidden = true
+        activateButton.isHidden = true
 
-        accountLabel.text = "You are now using " + forAccount.displayName + "."
-        accountLabel.hidden = false
+        accountLabel.text = "You are now using " + account.displayName + "."
+        accountLabel.isHidden = false
+
+        // Start account metrics updates for this account with 2s frequency
+        account.startUpdates(ofType: .metrics, withFrequency: .twoSeconds)
     }
 
-    @IBAction func activateTradableTouched(sender: UIButton) {       
-        //Begins authentication flow with clientID 100007 and custom URI in system browser; will store token in keychain and use it on the next run, if possible.
-        Tradable.sharedInstance.activateOrAuthenticate(100007, uri: "com.tradable.example3://oauth2callback", webView: nil)
+    // Authentication delegate method callback; an error occured during authentication
+    func tradableAuthenticationError(error: TradableError) {
+        let message = error.errorDetails ?? error.errorDescription
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+
+    // Events delegate method callback for account metrics
+    func tradableAccountMetricsUpdated(accountMetrics: TradableAccountMetrics) {
+        print(accountMetrics)
+    }
+
+    @IBAction func activateTradableTouched(_ sender: UIButton) {
+        // Begins authentication flow with clientID 100007 and custom URI in system browser; will store token in keychain and use it on the next run, if possible.
+        Tradable.sharedInstance.activateOrAuthenticateWith(appId: 100007, uri: "com.tradable.example3://oauth2callback")
     }
     
     override func didReceiveMemoryWarning() {
